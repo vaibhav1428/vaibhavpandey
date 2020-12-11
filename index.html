@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    
+    <title>nvdev</title>
+
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    height: 100vh;
+    background: #000;
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,#ff0000,#5edfff,#c0ffb3,#8105d8,#fbe555,#ed0cef,#6decb9);
+    mix-blend-mode: color;
+    pointer-events: none;
+}
+
+video{
+    object-fit: cover;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-size: 10vh;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 0.1em;
+   
+
+}
+h1 span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+    
+}
+
+
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    
+    }
+}
+
+
+
+
+
+
+
+    
+</style>
+</head>
+<body>
+    <section id="preorder">
+        <video src="smoke.mp4" style="width: auto; height: 100%;" autoplay muted preload="auto"></video>
+    <h1>
+        <span style="text-shadow: 1px 1px 2px black, 0 0 25px #ff0000, 0 0 5px #ff0000;">V</span>
+        <span style="text-shadow: 1px 1px 2px black, 0 0 25px #5edfff, 0 0 5px #5edfff;">A</span>
+        <span style="text-shadow: 1px 1px 2px black, 0 0 25px #c0ffb3, 0 0 5px #c0ffb3;">I</span>
+        <span style="text-shadow: 1px 1px 2px black, 0 0 25px #8105d8, 0 0 5px #8105d8;">B</span>
+        <span style="text-shadow: 1px 1px 2px black, 0 0 25px #fbe555, 0 0 5px #fbe555;">H</span>
+        <span style="text-shadow:  1px 1px 2px black, 0 0 25px #ed0cef, 0 0 5px #ed0cef;">A</span>
+        <span style="text-shadow: 1px 1px 2px black, 0 0 25px #6decb9, 0 0 5px #6decb9;" >V</span>
+    </h1>
+    
+     </section>
+
+     <script>setTimeout(function(){window.location.href="home.html"},3000);</script> 
+</body>
+</html>
